@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "prompt": "当前项目已经放入采购管理原型图和 SQL，请初始化项目上下文，并判断采购管理能否进入详细规划。",
+    "expected": "应扫描框架、原型、SQL 和知识库，生成 init-airead/init-read 报告、source-manifest、sql digest 和 module-readiness。"
+  },
+  {
+    "id": 2,
+    "prompt": "prototypes 根目录只有一个需求 PPT 和一个 Excel 功能清单，没有按模块拆分，请完成初始化。",
+    "expected": "应先建立输入材料清单和归类依据，把推断归属标注为推断，输出未归类项和待人工确认项。"
+  },
+  {
+    "id": 3,
+    "prompt": "我只新增了一份 SQL 和一条知识库规则，之前已初始化过，请刷新相关初始化产物。",
+    "expected": "应使用 source_fingerprint 对比输入变化，复用未变化产物，只刷新受影响的 SQL、知识库命中和准备度信息。"
+  }
+]

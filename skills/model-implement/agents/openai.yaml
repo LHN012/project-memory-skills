@@ -1,0 +1,7 @@
+interface:
+  display_name: "Model Implement"
+  short_description: "基于初始化上下文生成逐页面详细实施方案。"
+  default_prompt: "使用 $model-implement 把已完成的项目初始化文档和目标模块原型，转化为模块关联文档，以及逐页面的前端方案和后端方案。"
+
+policy:
+  allow_implicit_invocation: true

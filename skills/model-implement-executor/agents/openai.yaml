@@ -1,0 +1,7 @@
+interface:
+  display_name: "Model Implement Executor"
+  short_description: "依据已确认方案真正实施前后端代码。"
+  default_prompt: "使用 $model-implement-executor 在 model-implement-init 和 model-implement 文档已准备并确认后，依据初始化上下文、模块关联和页面方案真正开始编码实施。"
+
+policy:
+  allow_implicit_invocation: true

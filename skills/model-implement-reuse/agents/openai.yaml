@@ -1,0 +1,7 @@
+interface:
+  display_name: "Model Implement Reuse"
+  short_description: "沉淀公共组件、可复用逻辑和指定项目路径功能学习资产。"
+  default_prompt: "使用 $model-implement-reuse 学习或提取当前项目、或指定项目路径中的公共组件、业务功能块和可复用实现模式；默认只生成复用资产文档，只有在用户明确允许时才执行代码抽离或重构。"
+
+policy:
+  allow_implicit_invocation: true

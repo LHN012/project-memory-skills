@@ -1,0 +1,7 @@
+interface:
+  display_name: "Model Implement Init"
+  short_description: "初始化项目上下文、业务流程和数据库评估报告。"
+  default_prompt: "使用 $model-implement-init 扫描当前框架、已有模块、原型、说明文档和 SQL，在进入详细页面规划前生成共享上下文、业务流程、数据库评估、模块准备度以及人工审查报告。"
+
+policy:
+  allow_implicit_invocation: true

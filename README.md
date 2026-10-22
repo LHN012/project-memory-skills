@@ -1,0 +1,1 @@
+# Project Memory Skills v1\n\n这是第一代 Skills 分支。该分支只保留 v1 的 Skill 源码；跨项目 library、独立 docs 和项目记忆数据不纳入。\n\n请优先从 [v1.0.0 Release](https://github.com/LHN012/project-memory-skills/releases/tag/v1.0.0) 下载 project-memory-skills-v1.0.0.zip，解压后将 skills/ 下的目录复制到所使用的 Agent Skill 目录。\n

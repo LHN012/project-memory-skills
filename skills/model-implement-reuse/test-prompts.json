@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "prompt": "学习当前项目的附件上传组件，沉淀成可复用资产文档。",
+    "expected": "应默认进入 study 模式，只读取相关组件、接口和必要样式，生成 overview.md、contract.md、adoption-guide.md，不改代码。"
+  },
+  {
+    "id": 2,
+    "prompt": "从 D:/legacy-crm 中学习登录鉴权实现，整理跨项目可参考点。",
+    "expected": "应只读外部路径，把文档写回当前 .codex/model-implement/reuse/，不复制大段源码，不写入外部项目。"
+  },
+  {
+    "id": 3,
+    "prompt": "把当前项目里的公共表格能力抽离出来，我同意你做最小重构。",
+    "expected": "应确认 extract 模式和范围，先更新复用文档，再执行最小必要抽离并验证。"
+  }
+]
