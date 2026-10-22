@@ -1,0 +1,4 @@
+interface:
+  display_name: "Model Context RAG"
+  short_description: "为 memory 和 reports 建立可验证的上下文索引"
+  default_prompt: "Use $model-context-rag to index and search project memory and reports before reading full context."

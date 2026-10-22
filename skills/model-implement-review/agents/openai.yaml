@@ -1,0 +1,7 @@
+interface:
+  display_name: "Model Implement Review"
+  short_description: "接口契约审查、交互清单和 Playwright 页面验收。"
+  default_prompt: "使用 $model-implement-review 对目标模块做验收型审查：先判断前后端接口契约是否对齐，再生成待审查交互清单，最后用 Playwright 逐项测试页面交互和 CRUD 流程；只输出问题清单和待用户选择项，不默认修复。"
+
+policy:
+  allow_implicit_invocation: true

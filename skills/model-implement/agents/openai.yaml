@@ -1,0 +1,7 @@
+interface:
+  display_name: "Model Implement"
+  short_description: "RAG 辅助生成逐页面详细实施方案。"
+  default_prompt: "使用 $model-implement 先通过 model-context-rag 定位初始化报告和模块上下文，再结合目标模块原型、已有代码风格和知识库命中资料，生成模块关联文档，以及逐页面的前端方案和后端方案。只生成方案，不自动进入 executor。"
+
+policy:
+  allow_implicit_invocation: true

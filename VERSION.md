@@ -1,0 +1,1 @@
+# v2\n\n来源：2/Workbench-skill-pack-20260623-171519.zip。\n\n发布内容仅包含该版本的 skills/，已排除 library/、docs/ 和缓存文件。\n

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Model Implement Executor"
+  short_description: "综合方案、RAG、原型、SQL 和知识库落代码。"
+  default_prompt: "使用 $model-implement-executor 在用户明确触发实施后，依据已确认的 model-implement 方案，并综合 model-context-rag 原文、原型、SQL/数据库审查、knowledge-library 和真实代码完成前后端实现；高风险非阻塞项先跳过并集中列入待人工确认。"
+
+policy:
+  allow_implicit_invocation: true

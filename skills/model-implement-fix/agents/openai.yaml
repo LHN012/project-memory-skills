@@ -1,0 +1,7 @@
+interface:
+  display_name: "Model Implement Fix"
+  short_description: "轻量诊断修复已有问题并沉淀核心经验。"
+  default_prompt: "使用 $model-implement-fix 处理已有代码中的 bug、小改动、回归或实现偏差；先根据问题和代码定位，再按需查询知识库、RAG、初始化报告、方案、SQL 或原型。默认不生成问题报告，把核心根因、项目认知和复用经验沉淀到 memory，必要时回填 init-read。"
+
+policy:
+  allow_implicit_invocation: true

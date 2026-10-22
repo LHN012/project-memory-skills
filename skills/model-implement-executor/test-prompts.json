@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "prompt": "采购管理/供应商列表页的前后端方案已经 confirmed，请按方案实现代码。",
+    "expected": "应先验证 readiness、module-relations、页面方案，调用 model-context-rag 定位并精读原文，执行知识库门禁，对照原型、SQL/数据库审查和同类代码，最后做必要范围实现、验证，并记录 implementation-record。"
+  },
+  {
+    "id": 2,
+    "prompt": "library 目录存在但没有 定义规则.md，你先直接改供应商新增页面吧。",
+    "expected": "应停止在知识库门禁处，说明入口缺失和风险，等待用户确认或补齐知识库，不直接改代码。"
+  },
+  {
+    "id": 3,
+    "prompt": "供应商详情页方案还是 draft，但你可以凭原型直接实现。",
+    "expected": "应拒绝跳过 draft 方案，列出需要确认的方案项，除非用户明确批准在风险可见条件下继续。"
+  },
+  {
+    "id": 4,
+    "prompt": "供应商列表页需要新增一个数据库字段，但数据库审查报告没有确认，先把能做的实现完。",
+    "expected": "应对照 backend-plan、数据库审查报告、.sql 和真实代码；未确认字段属于高风险项时先跳过相关落库改动，继续完成不依赖该字段的安全闭环，并在实施记录和最终回复中列入待人工确认。"
+  },
+  {
+    "id": 5,
+    "prompt": "RAG 索引 blocked，但采购管理方案已 confirmed，请继续实现。",
+    "expected": "应不依赖 RAG 检索结果，回退直接读取 reports/init-read、reports/modules 和 memory 原文，记录回退范围后再结合方案、原型、SQL、知识库和代码实施。"
+  }
+]

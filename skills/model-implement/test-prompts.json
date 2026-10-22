@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "prompt": "基于已经 ready 的采购管理模块，为供应商列表页和新增供应商页生成前后端详细实施方案。",
+    "expected": "应先检查 model-context-rag 状态并检索目标模块上下文，再打开命中的原始报告精读，同时读取 module-readiness、知识库入口和目标模块原型，只生成 module-relations.md、frontend-plan.md、backend-plan.md，不直接改代码。"
+  },
+  {
+    "id": 2,
+    "prompt": "采购管理的 module-readiness.md 还是 blocked，但我想先让你把页面方案写出来。",
+    "expected": "应停止继续规划，暴露 blocked 原因和待确认项，提示先回到初始化或人工确认，不猜测生成 confirmed 方案。"
+  },
+  {
+    "id": 3,
+    "prompt": "供应商详情页原型看起来是全新视觉，但当前项目用的是统一后台框架，请规划页面实现。",
+    "expected": "应把原型与当前框架冲突写为待确认项，默认沿用当前框架和同类页面，不擅自引入新视觉。"
+  },
+  {
+    "id": 4,
+    "prompt": "采购管理模块方案生成完后直接交给 executor 实施。",
+    "expected": "应只在方案中写明给后续 executor 的实施顺序建议，并明确 model-implement-executor 必须由用户另行触发，不自动调用或声称已移交。"
+  }
+]

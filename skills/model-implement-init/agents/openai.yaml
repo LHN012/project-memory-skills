@@ -1,0 +1,7 @@
+interface:
+  display_name: "Model Implement Init"
+  short_description: "按接手项目顺序生成框架、已有模块、待办、业务和数据库初始化报告。"
+  default_prompt: "使用 $model-implement-init 先创建 AGENTS.md 与初始化契约，再扫描当前项目前后端框架、已有功能模块、prototypes 材料和 SQL，生成代码及框架信息、已有功能模块信息、待办清单、业务理解、数据库审查报告、待确认点以及 module-readiness。"
+
+policy:
+  allow_implicit_invocation: true

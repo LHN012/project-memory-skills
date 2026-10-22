@@ -1,0 +1,4 @@
+interface:
+  display_name: "Knowledge Library"
+  short_description: "Maintain local knowledge libraries and indexes."
+  default_prompt: "Use $knowledge-library to maintain a local knowledge library, generate/search indexes, initialize AGENTS.md rules, or capture reusable knowledge."
