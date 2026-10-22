@@ -8,7 +8,7 @@
 
 | 层级 | 职责 | 默认读取条件 | 写入权限 | 索引 |
 | --- | --- | --- | --- | --- |
-| `library` | 跨项目共享知识 | 索引命中当前任务时 | 仅用户明确授权 | [`library/INDEX.md`](library/INDEX.md) |
+| `library` | 跨项目共享知识 | 索引命中当前任务时 | 仅用户明确授权 | 本仓库不包含 |
 | `guardrails` | 当前项目操作约束 | 执行相关操作前 | 仅用户明确授权 | [`guardrails/INDEX.md`](guardrails/INDEX.md) |
 | `modules` | 当前项目已验证事实 | 涉及对应模块时 | 可按事实维护 | [`modules/INDEX.md`](modules/INDEX.md) |
 | `changes` | 重要变更与回滚线索 | 历史追踪、回归或回滚时 | 重要变更后维护 | [`changes/INDEX.md`](changes/INDEX.md) |
