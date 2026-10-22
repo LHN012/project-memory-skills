@@ -1,11 +1,11 @@
 # Workspace material intentionally excluded from this repository
-.codex/memory/library/
-.codex/ppt-revision/
+memory/library/
+.codex/
 
 # Local generated files
-.codex/.knowledge/*.sqlite
-.codex/.runtime/session-state.json
-.codex/.runtime/tmp/
+.knowledge/*.sqlite
+.runtime/session-state.json
+.runtime/tmp/
 __pycache__/
 *.pyc
 
