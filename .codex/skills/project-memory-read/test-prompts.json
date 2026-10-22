@@ -1,0 +1,62 @@
+[
+  {
+    "id": "read-order-button",
+    "prompt": "我要修改订单详情页的保存按钮。请读取完成这项修改所需的项目记忆。",
+    "expected": "先检查匹配的 guardrails，再读取订单模块和必要父上下文；不默认读取 library、changes 全量内容；证据足够后停止。"
+  },
+  {
+    "id": "trace-payment-flow",
+    "prompt": "支付成功后订单状态如何流转？请基于项目记忆回答，并说明来源、约束和仍缺失的信息。",
+    "expected": "从 modules 定位支付、订单和状态流转，必要时做一跳关系扩展；返回来源、状态、冲突或缺口，不加载整个记忆库。"
+  },
+  {
+    "id": "missing-derived-index",
+    "prompt": "项目没有 manifest 或 FTS5，且只有一条没有 frontmatter 的旧 Markdown 记忆。请查找支付状态规则。",
+    "expected": "回退分层 INDEX.md、文件名和文本搜索；将旧条目标记为 metadata_state=legacy，不自动改写文件，也不因缺少派生索引而编造结论。"
+  },
+  {
+    "id": "read-date-partitioned-changes",
+    "prompt": "请查找 2026-09-15 的提级修复记录。",
+    "expected": "按日期定位 changes/2026-09-15.jsonl，再按 change_id、issue 或文本内容读取必要记录；不把 changes/INDEX.md 当作单条记录索引。"
+  },
+  {
+    "id": "read-related-node",
+    "prompt": "请查找订单保存规则，并返回它约束的模块或规则节点。",
+    "expected": "先精确或 FTS5 定位主节点，再最多扩展一跳关系；返回关系边和目标节点，不启动向量检索或完整 GraphRAG。"
+  },
+  {
+    "id": "read-no-side-effects",
+    "prompt": "请读取数据库表结构记忆并预览字段信息，原始材料中有中文注释和括号类型。",
+    "expected": "只读记忆和原始材料，不创建预览目录、缓存或项目根目录文件；解析内容不拼接为 shell 命令。"
+  },
+  {
+    "id": "read-page-node",
+    "prompt": "请读取综合受理页面的按钮显示条件和接口调用。",
+    "expected": "先从呼叫中心业务域索引定位页面文档；没有页面级条目时按当前缺口查看必要源码，不把域概览当成页面事实；核验出未记录事实后，在同轮交接维护 Skill，自动沉淀并同步索引。"
+  },
+  {
+    "id": "discovery-to-maintenance",
+    "prompt": "项目已启用本记忆架构。了解一下页面权限管理，索引中还没有这个页面；源码已能核对页面、接口与权限过滤规则。",
+    "expected": "检索阶段只读，精确探索当前页面源码并保留来源；已核验的持续事实交接为 ready，答复前接续维护 Skill 创建 modules/system/page-permission.md 和必要索引，不等待用户追问，不自动修改 library/guardrails。"
+  },
+  {
+    "id": "explicit-read-only-discovery",
+    "prompt": "严格只读，了解一下页面权限管理，不要修改任何文件，也不要写入记忆。页面记忆不存在。",
+    "expected": "可按缺口只读核验实际源码并回答，返回会话内维护候选及本轮不写入的原因；不得创建记忆、索引、缓存或会话状态。"
+  },
+  {
+    "id": "partial-source-discovery",
+    "prompt": "了解一下诉求摸排的提交流程。现有记忆没有提交规则，当前源码链路能核对，但本轮没有实库和运行环境。",
+    "expected": "按当前任务核验提交链路，将源码支持的事实交接自动维护；页面保持 partial 并区分源码结论与未验证的实库/运行效果，不因为整页未验证而放弃沉淀，也不扫描全项目。"
+  },
+  {
+    "id": "read-major-plan-current-version",
+    "prompt": "继续实施通话记录大需求。索引中A需求的v1已被v2替代，另有日期更新但属于B需求的文件；A中存在一个未解决P0影响录音关联，查询功能是独立明确事项。",
+    "expected": "按文件级简介和 plan_id 定位A当前有效v2，不因B日期更新选择B，也不默认加载旧版；读取需求清单、待补充和依赖，禁止实施P0影响及依赖部分，独立事项依已有授权处理，不把status=verified等同实施完成。"
+  },
+  {
+    "id": "read-small-change-without-plan",
+    "prompt": "调整订单页按钮文案，plans中没有该事项。",
+    "expected": "检查匹配约束和当前页面事实；计划缺失不阻塞小修改，不触发计划文件、日计划或补建路线图。"
+  }
+]

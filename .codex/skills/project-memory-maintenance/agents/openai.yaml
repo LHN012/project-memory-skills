@@ -1,0 +1,4 @@
+interface:
+  display_name: "项目记忆维护"
+  short_description: "按分层权限自动接续任务中的增量记忆维护，并同步稀疏导航索引"
+  default_prompt: "使用 $project-memory-maintenance 按分层触发条件沉淀本轮已核验的增量，保留受保护层授权边界并同步索引。"

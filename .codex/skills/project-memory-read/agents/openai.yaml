@@ -1,0 +1,4 @@
+interface:
+  display_name: "项目记忆读取"
+  short_description: "按需读取相关记忆与任务缺口，并将已核验增量交接自动维护"
+  default_prompt: "使用 $project-memory-read 按需读取任务记忆，核验必要缺口并在允许写入时接续维护 Skill。"

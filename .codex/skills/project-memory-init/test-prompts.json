@@ -1,0 +1,42 @@
+[
+  {
+    "id": "init-empty-project",
+    "prompt": "当前项目还没有 .codex/memory。请初始化项目记忆架构，但不要扫描代码、总结业务或写入任何项目事实。",
+    "expected": "创建 .codex/source-materials、.codex/memory 及六个分层目录，每层有 INDEX.md；只生成骨架，不扫描原始材料或生成业务记忆。"
+  },
+  {
+    "id": "init-existing-memory",
+    "prompt": "项目已有 .codex/memory/modules/ 和其中几条记忆。请补齐缺失的记忆架构文件，不要覆盖或重排已有内容。",
+    "expected": "仅补充缺失的 .codex/source-materials、目录或索引，保留已有正文和索引内容，并报告保留项与冲突。"
+  },
+  {
+    "id": "init-cwd-and-partial-index",
+    "prompt": "当前工作目录是目标项目，但它位于另一个更大的工作区中；项目已有不完整 INDEX.md。请初始化记忆架构。",
+    "expected": "默认使用当前工作目录，不自动切换到更大的工作区或 Git 根；补齐 .codex/source-materials，不重排已有索引，允许部分完成并报告迁移建议。"
+  },
+  {
+    "id": "init-session-recovery",
+    "prompt": "请初始化项目记忆，并启用轻量会话恢复；不要启用向量数据库或完整 GraphRAG。",
+    "expected": "创建 .codex/source-materials 和六层记忆骨架，并复制独立的 session_state.py；原始材料和会话状态均不进入 memory 索引，不创建向量库或图数据库。"
+  },
+  {
+    "id": "init-side-effect-boundary",
+    "prompt": "初始化时需要解析一批 SQL 并预览表结构，其中包含 varchar(200)、中文表注释和带空格的字段名。",
+    "expected": "只创建记忆骨架；解析和预览使用内存、终端或系统临时目录，不把字段内容拼接进 shell 命令，不在项目根目录创建同名目录。"
+  },
+  {
+    "id": "init-project-agents",
+    "prompt": "初始化项目记忆，并让 Codex 后续按照页面级模块记忆和覆盖清单执行。项目已有一份 AGENTS.md。",
+    "expected": "调用生成脚本幂等更新 AGENTS.md 的受管区块，保留用户原有区块；明确页面结构、整体覆盖、检索阶段只读、四层按条件自动维护、两层明确授权，以及用户禁止写入优先和维护阶段审计边界。"
+  },
+  {
+    "id": "init-memory-freshness",
+    "prompt": "初始化一个多人协作项目。其他协作者可能直接修改代码，请让项目记忆能检测过期并自动刷新可安全更新的模块。",
+    "expected": "复制 Git 新鲜度检查入口；要求模块 Markdown 头保持轻量，verified_commit、impact_paths 和证据哈希进入 modules/.audit.json；代码变更命中时自动进入模块刷新，跨模块、高风险或证据不足时进入 needs_review。"
+  },
+  {
+    "id": "init-automatic-maintenance-contract",
+    "prompt": "初始化项目记忆，我希望以后按任务逐步了解并自动积累业务记忆，知识库和项目约束仍由我确定纳入。",
+    "expected": "初始化只搭骨架；新索引和生成的 AGENTS.md 明确先索引后探索、核验后同轮接续维护、索引紧接更新及人工授权层的边界；plans仅为材料中的大需求或分阶段复杂问题创建日期-vN详细计划，索引只列文件级简介并说明P0门槛；不为普通对话或小修改创建计划，不默认开启机器索引、后台 Hook 或持久交接队列。"
+  }
+]
