@@ -96,7 +96,7 @@ skills/
 
 ### 2. 安装 Skills
 
-从 [Releases](https://github.com/LHN012/project-memory-skills/releases) 下载对应版本的 `project-memory-skills-*.zip`，解压后将 `skills/` 下的 Skill 目录复制到所使用的 Agent 的 Skill 目录。不同 Agent 的安装目录名称可能不同，保持每个 Skill 目录的完整结构即可。
+从 [Releases](https://github.com/LHN012/project-memory-skills/releases) 下载对应版本的 `project-memory-skills-*.zip`，解压后将 `skills/` 下的 Skill 目录复制到所使用的 Agent 的 Skill 目录。压缩包同时包含 `LICENSE`，便于随包分发许可证文本。不同 Agent 的安装目录名称可能不同，保持每个 Skill 目录的完整结构即可。
 
 当前版本包含 `project-memory-init`、`project-memory-read` 和 `project-memory-maintenance` 三个核心流程。v1、v2 的安装包保留各自时代的 Skill 集合。
 
@@ -122,7 +122,7 @@ python -B skills/project-memory-init/templates/knowledge/scripts/check_index.py 
 
 ## Releases
 
-Skills 压缩包按版本顺序发布在 [Releases](https://github.com/LHN012/project-memory-skills/releases)。每个压缩包只包含对应版本的 `skills/`，不包含项目 `memory/`、跨项目 `library/` 或额外文档。
+Skills 压缩包按版本顺序发布在 [Releases](https://github.com/LHN012/project-memory-skills/releases)。每个压缩包包含对应版本的 `skills/` 和 `LICENSE`，不包含项目 `memory/`、跨项目 `library/` 或额外文档。
 
 ## 发布边界
 
@@ -137,5 +137,5 @@ Skills 压缩包按版本顺序发布在 [Releases](https://github.com/LHN012/pr
 
 ## 许可
 
-当前仓库未声明开源许可证。若要公开分发，请先补充合适的 `LICENSE` 文件。
+本项目采用 [MIT License](LICENSE)。使用、修改或再分发时请保留版权声明和许可证文本。
 
